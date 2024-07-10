@@ -23,10 +23,9 @@ AND `courses`.`year`= 1;
 SELECT *
 FROM `exams`
 WHERE `exams`.`date`= 2020-06-20
-AND `exams`.hour > 14;
-(non funziona)?
+AND HOUR(`exams`.`hour`) >= 14;
 
-6. 
+6.
 SELECT *
 FROM `degrees`
 WHERE `degrees`.`level` = "magistrale"
@@ -39,3 +38,6 @@ FROM `departments`;
 SELECT *
 FROM `teachers`
 WHERE `teachers`.`phone` IS NULL;
+
+9.
+INSERT INTO `students`
